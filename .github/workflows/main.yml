@@ -1,0 +1,24 @@
+name: Workflow from scratch
+
+on: 
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - uses: actions/checkout@v5.0.0
+      
+    - name: run a single command
+      run: echo i wrote this workflow from scratch
+    - name: run a single command
+      run: echo indentation is tricky 
+    
+    
